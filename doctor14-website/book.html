@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Book an Appointment – Dr. Shyma Sunil, Consultant Nephrologist</title>
+  <meta name="description" content="Schedule a consultation with Dr. Shyma Sunil, MBBS, MD, DM. Convenient online booking via WhatsApp, OPD timings, and clinic location.">
+  
+  <!-- Google Fonts: Cormorant Garamond & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Dr. Shyma Sunil - Home">
+        <span class="brand-name">Dr. Shyma Sunil</span>
+        <span class="brand-role">Consultant Nephrologist</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="care.html" class="nav-link">Areas of Care</a>
+        <a href="kidney-health.html" class="nav-link">Kidney Health</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="faq.html" class="nav-link">Common Questions</a>
+        <a href="book.html" class="btn btn-outline nav-cta active">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Horizontally Scrollable Menu Row (Under Header) -->
+  <nav class="mobile-nav-bar" aria-label="Mobile Sections Menu">
+    <div class="mobile-nav-inner">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+      <a href="care.html" class="mobile-nav-item">Areas of Care</a>
+      <a href="kidney-health.html" class="mobile-nav-item">Kidney Health</a>
+      <a href="about.html" class="mobile-nav-item">About</a>
+      <a href="faq.html" class="mobile-nav-item">Common Questions</a>
+      <a href="book.html" class="mobile-nav-item active">Book a Visit</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb-wrapper">
+      <a href="index.html" class="breadcrumb-link">
+        <span class="breadcrumb-arrow">←</span> Back to Home
+      </a>
+    </div>
+
+    <!-- Page Hero Header -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow reveal">Direct Consultation</span>
+        <h1 class="page-title reveal delay-1">Book an Appointment</h1>
+        <p class="page-lead reveal delay-2">
+          Request your consultation in moments. Fill out the details below to open a pre-filled booking request directly on WhatsApp with our clinic coordinator, or contact our reception desk during OPD hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Form & Clinic Details Section -->
+    <section class="page-content-section">
+      <div class="container">
+        <div class="book-grid">
+          
+          <!-- Column 1: Interactive Appointment Form -->
+          <div class="book-form-card reveal">
+            <span class="eyebrow">Online Request Form</span>
+            <h2 style="font-size: 2rem; margin-bottom: 24px;">Patient Consultation Request</h2>
+            
+            <form id="appointment-form" novalidate>
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullname" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullname" name="fullname" class="form-input" required placeholder="e.g. Anand Menon" autocomplete="name">
+              </div>
+
+              <!-- Phone & Date -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" class="form-label">10-Digit Mobile Number <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-input" required placeholder="e.g. 9745866333" maxlength="14" autocomplete="tel">
+                  <div class="field-error-msg" id="phone-error">Please enter a valid 10-digit mobile number.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferred-date" class="form-label">Preferred Date <span class="req">*</span></label>
+                  <input type="date" id="preferred-date" name="preferred-date" class="form-input" required>
+                </div>
+              </div>
+
+              <!-- Time Slot & Consultation Type -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="timeslot" class="form-label">Preferred Time Slot</label>
+                  <select id="timeslot" name="timeslot" class="form-select">
+                    <option value="Morning (10:00 AM – 1:00 PM)">Morning (10:00 AM – 1:00 PM)</option>
+                    <option value="Afternoon (4:30 PM – 7:00 PM)">Afternoon (4:30 PM – 7:00 PM)</option>
+                    <option value="Any Available Slot">Any Available Slot</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="visit-type" class="form-label">Type of Consultation</label>
+                  <select id="visit-type" name="visit-type" class="form-select">
+                    <option value="First Consultation / Abnormal Reports">First Consultation / Abnormal Reports</option>
+                    <option value="Follow-up Visit">Follow-up Visit</option>
+                    <option value="Dialysis Planning &amp; Advice">Dialysis Planning &amp; Advice</option>
+                    <option value="Transplant Evaluation / Second Opinion">Transplant Evaluation / Second Opinion</option>
+                    <option value="Kidney Stones &amp; Diet Plan">Kidney Stones &amp; Diet Plan</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Reason for Visit / Medical Notes -->
+              <div class="form-group">
+                <label for="reason" class="form-label">Reason for Visit or Current Symptoms</label>
+                <textarea id="reason" name="reason" class="form-textarea" placeholder="Briefly describe your symptoms (e.g. elevated creatinine, leg swelling, protein in urine, diabetes follow-up)"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Request via WhatsApp <span>→</span>
+              </button>
+
+              <!-- WhatsApp Fallback Notification Box -->
+              <div class="book-result-box" id="booking-result" role="alert">
+                <div class="book-result-title">Opening WhatsApp...</div>
+                <p class="book-result-text">
+                  Your appointment request message has been composed. If WhatsApp did not open automatically, please click below to send it directly or call our clinic coordinator:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+                  <a href="#" id="wa-fallback-btn" class="book-result-btn" target="_blank" rel="noopener">
+                    Open WhatsApp Message
+                  </a>
+                  <a href="tel:+919745866333" class="btn btn-outline" style="border-color: #4ade80; color: #4ade80;">
+                    Call Reception: +91 97458 66333
+                  </a>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Column 2: Beside it - Phone, Email, Address, OPD Timings -->
+          <div class="clinic-info-card reveal delay-1">
+            <span class="eyebrow">Clinic Details</span>
+            <h3>Nephrology OPD Information</h3>
+
+            <!-- Direct Phone & WhatsApp -->
+            <div class="info-item">
+              <div class="info-label">Direct Phone &amp; WhatsApp</div>
+              <div class="info-val">
+                <a href="tel:+919745866333"><strong>+91 97458 66333</strong></a>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="info-item">
+              <div class="info-label">Email Enquiries</div>
+              <div class="info-val">
+                <a href="mailto:vismaya@stackertec.com">vismaya@stackertec.com</a>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="info-item">
+              <div class="info-label">Hospital &amp; Clinic Address</div>
+              <div class="info-val">
+                Department of Nephrology, 4th Floor,<br>
+                City Multi-Speciality Hospital,<br>
+                MG Road, Kochi, Kerala 682016
+              </div>
+            </div>
+
+            <!-- OPD Timings Table -->
+            <div class="info-item">
+              <div class="info-label">OPD Timings Schedule</div>
+              <table class="opd-schedule-table">
+                <tbody>
+                  <tr>
+                    <td class="day">Monday – Friday</td>
+                    <td class="hours">10:00 AM – 2:00 PM<br>4:30 PM – 7:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="day">Saturday</td>
+                    <td class="hours">10:00 AM – 1:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td class="day">Sunday</td>
+                    <td class="hours" style="color: var(--gold);">Closed (Emergency on-call)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Preparation Checklist -->
+            <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+              <div class="info-label">Before You Arrive Checklist</div>
+              <ul style="margin: 10px 0 0 16px; font-size: 0.92rem; color: var(--muted);">
+                <li>Bring all previous blood tests (creatinine, urea, eGFR).</li>
+                <li>Carry your latest urine routine &amp; microalbumin (uACR) reports.</li>
+                <li>Bring a list or the actual packaging of all current medications.</li>
+                <li>Arrive 10 minutes prior to your slot for resting blood pressure checks.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h3>Dr. Shyma Sunil</h3>
+          <div class="tagline">MBBS, MD, DM · Consultant Nephrologist</div>
+          <p>
+            Dedicated to compassionate, evidence-based kidney medicine. Protecting your renal function through early detection, patient education, and personalised therapy.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="care.html">Areas of Care</a></li>
+            <li><a href="kidney-health.html">Kidney Health Guides</a></li>
+            <li><a href="about.html">About Dr. Shyma Sunil</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="book.html">Book Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic &amp; Contact</h4>
+          <ul class="footer-links">
+            <li><strong>Location:</strong> Department of Nephrology, City Multi-Speciality Hospital, MG Road, Kochi, Kerala 682016</li>
+            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+919745866333">+91 97458 66333</a></li>
+            <li><strong>Email:</strong> <a href="mailto:vismaya@stackertec.com">vismaya@stackertec.com</a></li>
+            <li><strong>OPD Timings:</strong> Mon–Fri: 10 AM–2 PM &amp; 4:30 PM–7 PM | Sat: 10 AM–1 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          <strong>Medical Disclaimer:</strong> The information contained on this website is intended solely for educational purposes and does not constitute medical advice, clinical diagnosis, or treatment recommendations. Always seek the advice of your physician or qualified nephrologist regarding any medical condition.
+        </p>
+        <p class="footer-copy">
+          &copy; 2026 Dr. Shyma Sunil, MBBS, MD, DM. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
